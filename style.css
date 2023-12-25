@@ -1,0 +1,357 @@
+.custom-navbar{
+    background-color: rgb(100, 100, 255);
+}
+.nav-item .navbar-brand{
+    font-size: 50px;
+    font-family: Courgette;
+}
+.nav-item .nav-link{
+    font-size: 20px;
+    font-family: Courgette;
+}
+.image{
+    border-radius: 50%;
+}
+.custom-home{
+    background-color: rgb(47, 47, 158);
+}
+.heading{
+    color: rgb(213, 161, 97);
+    font-size: 40px;
+    font-family: Agbalumo;
+}
+.heading1{
+    color: rgb(241, 6, 45);
+    font-size: 60px;
+    font-family: Agbalumo;
+}
+.image1{
+    border-radius: 10%;
+}
+.content{
+    color: rgb(241, 6, 45);
+    font-size: 30px;
+    font-family: Courgette;
+}
+.content1{
+    font-family: Courgette;
+}
+.pic{
+    margin-top: 70px;
+}
+ul.d-flex {
+    list-style-type: none;
+}
+.container-fluid .card{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: rgb(58, 57, 57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-skills{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.container-fluid .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+.container-fluid .card .percent svg{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(270deg);
+}
+.container-fluid .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: black;
+    transform: translate(5px,5px);
+}
+.container-fluid .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot{
+    0%{
+       transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+.contents{
+    position: relative;
+    max-width: 1400px;
+    margin: 0px auto;
+}
+.text-box{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY((0px));
+    }
+}
+.text-box:nth-child(1){
+    animation-delay: 0s;
+}
+.text-box:nth-child(2){
+    animation-delay: 1s;
+}
+.text-box:nth-child(3){
+    animation-delay: 2s;
+}
+.text-box:nth-child(4){
+    animation-delay: 3s;
+}
+.text-box:nth-child(5){
+    animation-delay: 4s;
+}
+
+.box{
+    padding: 20px 30px;
+    position: relative;
+    background: antiquewhite;
+    border-radius: 6px;
+}
+.left-box{
+    left: 38px;
+}
+.right-box{
+    left: 668px;
+}
+.contents::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: antiquewhite;
+    top: 0;
+    left: 50%;
+    animation: moveline 6s linear forwards;
+}
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.left-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid antiquewhite;
+    right: -13px;
+}
+.right-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid antiquewhite;
+    left: -13px;
+}
+.icon{
+    font-size: 30px;
+}
+.social-icon{
+    font-size: 30px;
+}
+.fa-instagram:hover,
+.fa-linkedin:hover,
+.fa-whatsapp:hover {
+    transform: scale(1.2);
+    color: red !important;
+}
+@media (max-width: 768px) {
+    .image {
+      height: 200px; 
+      width: 200px;
+      margin-left: 100px; 
+      margin-top: 10px;
+    }
+    .custom-home {
+        padding-top: 3rem; 
+    }
+    .d-flex {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .pic {
+        margin-bottom: 2rem; 
+    }
+    .image1 {
+        height: auto; 
+        width: 70%; 
+        max-width: 300px; 
+        margin-top: -120px;
+    }
+    .col-lg-4, .col-lg-8 {
+        width: 100%; 
+        text-align: center; 
+    }
+    .col-lg-8 {
+        padding: 0 1rem; 
+    } 
+    .content1 {
+        font-size: 14
+    }
+    .content1 ul {
+        padding-inline-start: 0; 
+        text-align: left; 
+    }
+    .content1 ul li {
+        margin-bottom: 1rem;
+    }
+    .custom-home .heading {
+        font-size: 28px;
+    }
+    .custom-home .head{
+        margin-top: -50px;
+    }
+    .custom-skills {
+        flex-wrap: wrap; 
+        gap: 20px; 
+    }
+    .card {
+        width: calc(50% - 20px);
+    }
+    .percent {
+        width: 100px; 
+        height: 100px; 
+        font-size: 14px; 
+    }
+    .percent svg {
+        width: 100px; 
+        height: 100px; 
+    }
+    .percent .number h2 {
+        font-size: 20px; 
+    }
+    .percent .number p {
+        font-size: 12px; 
+    }
+    .custom-home .heading {
+        font-size: 28px; 
+    }
+    .contents {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; 
+    }
+    .text-box {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+    }
+    .text-box .box {
+        padding: 15px;
+    }
+    .text-box .box h3 {
+        font-size: 24px; 
+    }
+    .text-box .box p {
+        font-size: 16px; /
+    }
+    .left-box, .right-box {
+        left: unset;
+        margin-bottom: 20px;
+    }
+    .contents::after {
+        display: none; 
+    }
+    .left-arrow, .right-arrow {
+        display: block; 
+        position: absolute;
+        top: 28px;
+        z-index: 1;
+    }
+    .left-arrow {
+        right: -13px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid antiquewhite;
+    }
+    .right-arrow {
+        left: -13px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid antiquewhite;
+    }
+    input[type="text"],textarea {
+        width: calc(100% - 20px);
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+}
